@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Cze 19, 2025 at 07:12 PM
+-- Generation Time: Cze 19, 2025 at 10:02 PM
 -- Wersja serwera: 10.4.32-MariaDB
 -- Wersja PHP: 8.0.30
 
@@ -357,7 +357,22 @@ INSERT INTO `purchases` (`id`, `user_id`, `game_id`, `purchase_date`) VALUES
 (40, 6, 8, '2025-06-17 02:18:47'),
 (41, 4, 23, '2025-06-18 23:15:42'),
 (42, 4, 24, '2025-06-18 23:16:26'),
-(43, 4, 34, '2025-06-19 18:27:57');
+(43, 4, 34, '2025-06-19 18:27:57'),
+(44, 4, 32, '2025-06-19 19:35:02'),
+(45, 4, 43, '2025-06-19 19:35:14'),
+(46, 4, 21, '2025-06-19 19:39:06'),
+(47, 4, 38, '2025-06-19 19:41:18'),
+(48, 9, 22, '2025-06-19 20:19:34'),
+(49, 9, 21, '2025-06-19 20:19:48'),
+(50, 10, 22, '2025-06-19 20:21:03'),
+(51, 10, 21, '2025-06-19 20:21:23'),
+(52, 10, 24, '2025-06-19 20:21:26'),
+(53, 10, 23, '2025-06-19 20:21:33'),
+(54, 11, 1, '2025-06-19 20:23:21'),
+(55, 11, 24, '2025-06-19 20:23:25'),
+(56, 11, 22, '2025-06-19 20:23:30'),
+(57, 12, 16, '2025-06-19 20:25:22'),
+(58, 12, 22, '2025-06-19 20:25:31');
 
 -- --------------------------------------------------------
 
@@ -386,7 +401,19 @@ INSERT INTO `reviews` (`id`, `user_id`, `game_id`, `rating`, `content`, `image`,
 (7, 4, 10, 7, 'fajna gierka w podejrzenia', NULL, '2025-06-16 23:05:51'),
 (8, 6, 8, 8, 'okok', NULL, '2025-06-17 02:19:01'),
 (9, 4, 12, 5, 'srednio', NULL, '2025-06-19 17:43:13'),
-(10, 4, 24, 9, 'asasin', NULL, '2025-06-19 18:31:42');
+(10, 4, 24, 9, 'asasin', NULL, '2025-06-19 18:31:42'),
+(13, 4, 23, 9, 'polecam', NULL, '2025-06-19 19:41:06'),
+(17, 4, 21, 10, 'Polecam zakupić tę grę ?', NULL, '2025-06-19 19:55:06'),
+(18, 9, 21, 9, 'gra na 9', NULL, '2025-06-19 20:20:03'),
+(19, 9, 22, 10, 'dycha', NULL, '2025-06-19 20:20:20'),
+(20, 10, 22, 9, 'Spoko', NULL, '2025-06-19 20:21:14'),
+(21, 10, 23, 10, 'smok', NULL, '2025-06-19 20:21:44'),
+(22, 10, 24, 10, 'mozna skakac po dachach', NULL, '2025-06-19 20:21:59'),
+(23, 10, 21, 10, 'okuratna', NULL, '2025-06-19 20:22:21'),
+(24, 11, 1, 10, '10/10elo', NULL, '2025-06-19 20:23:40'),
+(25, 12, 22, 9, 'smok', NULL, '2025-06-19 20:25:36'),
+(26, 12, 16, 1, 'snajperzy', NULL, '2025-06-19 20:25:45'),
+(27, 4, 38, 8, 'nawet trudna', NULL, '2025-06-19 20:26:26');
 
 -- --------------------------------------------------------
 
@@ -413,10 +440,15 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `role`, `avatar`, `created_at`, `wallet_balance`, `description`, `favorite_game_id`) VALUES
 (3, 'dis', 'dis@lol.gg', '$2y$10$gd63lOdIIFRlA7Kz1bpIH.8yz.jYWcHsx.B37Rr/2sqyg164WI5Xy', 'user', 'uploads/684ec9fae3106qr.png', '2025-06-15 15:10:11', 0.00, NULL, NULL),
-(4, 'admin11', 'admin@admin.pl', '$2y$10$ZDhHDPdjPNxiTAr5CHaCL.POm3bzqxXtpa5ron0H4AgrCMIXjf1f.', 'admin', 'uploads/685092a14c12cdel.jpg', '2025-06-15 15:30:14', 110.16, 'gracz gier kompputeruwek:)', 1),
+(4, 'admin11', 'admin@admin.pl', '$2y$10$ZDhHDPdjPNxiTAr5CHaCL.POm3bzqxXtpa5ron0H4AgrCMIXjf1f.', 'admin', 'uploads/685092a14c12cdel.jpg', '2025-06-15 15:30:14', 580.20, 'gracz gier kompputeruwek:)', 1),
 (5, 'user2', 'user2@email.com', '$2y$10$9eAAZx32Xm8lApjna7AzKumLNrDjeFS9IM5cdpnV9bEV.cGa0Di.S', 'user', NULL, '2025-06-15 18:04:21', 275.07, NULL, NULL),
 (6, 'haslo654321', 'hasl@poda.pl', '$2y$10$fQHGadoH.92e1rtdR1dgYOKhBMPs0brVE0bEWOCfuhXrJzmEpSZ5e', 'user', NULL, '2025-06-17 00:22:01', 50.06, 'asdaar', 10),
-(7, 'uzytkownik', 'uzytkownik@email.com', '$2y$10$88EShWjV7yE7tryDLNcRmuy7LQs0qI3tpAqkVmS1W2m5UkhWuiwH2', 'user', NULL, '2025-06-19 02:56:40', 440.00, NULL, NULL);
+(7, 'uzytkownik', 'uzytkownik@email.com', '$2y$10$88EShWjV7yE7tryDLNcRmuy7LQs0qI3tpAqkVmS1W2m5UkhWuiwH2', 'user', NULL, '2025-06-19 02:56:40', 440.00, NULL, NULL),
+(8, 'jan', 'jan@email.com', '$2y$10$pW9mrtsBOqlU2Los8UAEH.RepWuIBM24VvKxjmky04sytgfrajBrW', 'user', NULL, '2025-06-19 19:25:15', 0.00, NULL, NULL),
+(9, 'asd', 'asd@asd.pl', '$2y$10$pvmKJh9oLyfIIhVX7J0PXOqliLW28Reuh.OYF5Xy3oVIG1uWC3yYu', 'user', NULL, '2025-06-19 20:19:12', 150.02, NULL, NULL),
+(10, 'gamer', 'gamer@email.com', '$2y$10$.u0QvU.ITMipt65.1r8ip.ljME0FmbeW86xpeyrc8w/aBXhx1Aa6C', 'user', NULL, '2025-06-19 20:20:48', 9540.04, NULL, NULL),
+(11, 'barb', 'barb@email.com', '$2y$10$cntqdEWlnUOwKZOuIeC1aegFrn7808DduutGeX0FkdPMyMB7cyJq.', 'user', NULL, '2025-06-19 20:23:05', 4730.03, NULL, NULL),
+(12, 'mamon', 'mamon@email.com', '$2y$10$2FHEbvRPTXgxQFO0FVsFBe1hiBCF2kQ1S5CB0GCjS7CacRhopG81y', 'user', 'uploads/685455fe6107alogoufo.png', '2025-06-19 20:24:32', 200.01, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -496,7 +528,31 @@ INSERT INTO `wallet_transactions` (`id`, `user_id`, `type`, `amount`, `descripti
 (56, 4, 'deposit', 1.00, 'Doładowanie portfela', '2025-06-19 17:42:10'),
 (57, 4, 'deposit', 1.00, 'Doładowanie portfela', '2025-06-19 17:42:13'),
 (58, 4, 'purchase', -49.99, 'Zakup gry: Slay the Spire', '2025-06-19 18:27:57'),
-(59, 4, 'deposit', 5.00, 'Doładowanie portfela', '2025-06-19 18:48:48');
+(59, 4, 'deposit', 5.00, 'Doładowanie portfela', '2025-06-19 18:48:48'),
+(60, 4, 'purchase', -59.99, 'Zakup gry: Cuphead', '2025-06-19 19:35:02'),
+(61, 4, 'purchase', -49.99, 'Zakup gry: Little Nightmares', '2025-06-19 19:35:14'),
+(62, 4, 'deposit', 200.00, 'Doładowanie portfela', '2025-06-19 19:38:41'),
+(63, 4, 'deposit', 200.00, 'Doładowanie portfela', '2025-06-19 19:38:59'),
+(64, 4, 'purchase', -249.99, 'Zakup gry: Baldur\'s Gate 3', '2025-06-19 19:39:06'),
+(65, 4, 'purchase', -119.99, 'Zakup gry: Dark Souls III', '2025-06-19 19:41:18'),
+(66, 4, 'deposit', 50.00, 'Doładowanie portfela', '2025-06-19 20:15:56'),
+(67, 9, 'deposit', 500.00, 'Doładowanie portfela', '2025-06-19 20:19:20'),
+(68, 9, 'purchase', -99.99, 'Zakup gry: The Elder Scrolls V: Skyrim', '2025-06-19 20:19:34'),
+(69, 9, 'purchase', -249.99, 'Zakup gry: Baldur\'s Gate 3', '2025-06-19 20:19:48'),
+(70, 10, 'deposit', 10000.00, 'Doładowanie portfela', '2025-06-19 20:20:59'),
+(71, 10, 'purchase', -99.99, 'Zakup gry: The Elder Scrolls V: Skyrim', '2025-06-19 20:21:03'),
+(72, 10, 'purchase', -249.99, 'Zakup gry: Baldur\'s Gate 3', '2025-06-19 20:21:23'),
+(73, 10, 'purchase', -49.99, 'Zakup gry: Assassin\'s Creed II', '2025-06-19 20:21:26'),
+(74, 10, 'purchase', -59.99, 'Zakup gry: Dragon Age: Origins', '2025-06-19 20:21:33'),
+(75, 11, 'deposit', 5000.00, 'Doładowanie portfela', '2025-06-19 20:23:18'),
+(76, 11, 'purchase', -119.99, 'Zakup gry: The Witcher 3: Wild Hunt', '2025-06-19 20:23:21'),
+(77, 11, 'purchase', -49.99, 'Zakup gry: Assassin\'s Creed II', '2025-06-19 20:23:25'),
+(78, 11, 'purchase', -99.99, 'Zakup gry: The Elder Scrolls V: Skyrim', '2025-06-19 20:23:30'),
+(79, 12, 'deposit', 100.00, 'Doładowanie portfela', '2025-06-19 20:25:15'),
+(80, 12, 'deposit', 200.00, 'Doładowanie portfela', '2025-06-19 20:25:17'),
+(81, 12, 'purchase', 0.00, 'Zakup gry: League of Legends', '2025-06-19 20:25:22'),
+(82, 12, 'purchase', -99.99, 'Zakup gry: The Elder Scrolls V: Skyrim', '2025-06-19 20:25:31'),
+(83, 4, 'deposit', 500.00, 'Doładowanie portfela', '2025-06-19 20:26:09');
 
 -- --------------------------------------------------------
 
@@ -516,7 +572,11 @@ CREATE TABLE `wishlist` (
 --
 
 INSERT INTO `wishlist` (`id`, `user_id`, `game_id`, `added_at`) VALUES
-(40, 4, 44, '2025-06-19 02:09:03');
+(44, 4, 17, '2025-06-19 19:56:07'),
+(45, 4, 33, '2025-06-19 19:56:07'),
+(47, 4, 42, '2025-06-19 19:56:11'),
+(48, 4, 36, '2025-06-19 19:56:11'),
+(50, 4, 5, '2025-06-19 19:56:13');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -600,31 +660,31 @@ ALTER TABLE `games`
 -- AUTO_INCREMENT for table `purchases`
 --
 ALTER TABLE `purchases`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- AUTO_INCREMENT for table `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `wallet_transactions`
 --
 ALTER TABLE `wallet_transactions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 
 --
 -- AUTO_INCREMENT for table `wishlist`
 --
 ALTER TABLE `wishlist`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- Constraints for dumped tables
